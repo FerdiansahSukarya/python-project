@@ -337,36 +337,36 @@ node4.next = node5
 # print("Isi Node2 :",node2.info,"->",node2.next)
 
 # Bagian ferdi
-#while != 0
-if pilih == 1:
-    print("------ Menu Penambahan ------")
-    print("1.Penambahan Data Barang di Depan")
-    print("2.Penambahan Data Barang di Belakang")
-    print("3.Penambahan Data Barang di Tengah")
-    pilhpnmbhn = int(input("Pilih Menu : "))
-    # while
-    if pilhpnmbhn == 1:
-        DataBaru = int(input("Masukan Data Baru : "))
-        list1.SisipDepanSingle(DataBaru)
-        list1.tampilData()
-        list1.penghancuran()
-    elif pilhpnmbhn == 2:
-        DataBaru = int(input("Masukan Data Baru : "))
-        list1.SisipBelakangSingle(DataBaru)
-        list1.tampilData()
-        list1.penghancuran()
-    elif pilhpnmbhn == 3:
-        DataBaru = int(input("Masukan Data Baru : "))
-        list1.SisipTengahSingle(DataBaru)
-        list1.tampilData()
-        list1.penghancuran()
-elif pilih == 2:
-     print("------ Menu Penghapusan ------")
-     print("1.Penghapusan Data Barang di Depan")
-     print("2.Penghapusan Data Barang di Belakang")
-     print("3.Penghapusan Data Barang di tengah")
-     pilhpnmbhn = int(input("Pilih Menu : "))
-     #while
+while pilih != 0:    
+    if pilih == 1:
+        print("------ Menu Penambahan ------")
+        print("1.Penambahan Data Barang di Depan")
+        print("2.Penambahan Data Barang di Belakang")
+        print("3.Penambahan Data Barang di Tengah")
+        pilhpnmbhn = int(input("Pilih Menu : "))
+    while pilih != 0:
+        if pilhpnmbhn == 1:
+            DataBaru = int(input("Masukan Data Baru : "))
+            list1.SisipDepanSingle(DataBaru)
+            list1.tampilData()
+            list1.penghancuran()
+        elif pilhpnmbhn == 2:
+            DataBaru = int(input("Masukan Data Baru : "))
+            list1.SisipBelakangSingle(DataBaru)
+            list1.tampilData()
+            list1.penghancuran()
+        elif pilhpnmbhn == 3:
+            DataBaru = int(input("Masukan Data Baru : "))
+            list1.SisipTengahSingle(DataBaru)
+            list1.tampilData()
+            list1.penghancuran()
+        elif pilih == 2:
+            print("------ Menu Penghapusan ------")
+            print("1.Penghapusan Data Barang di Depan")
+            print("2.Penghapusan Data Barang di Belakang")
+            print("3.Penghapusan Data Barang di tengah")
+            pilhpnmbhn = int(input("Pilih Menu : "))
+    while pilih != 0:
      if pilhpnmbhn == 1:
         list1.HapusDepanSingle()
         list1.tampilData()
@@ -379,26 +379,26 @@ elif pilih == 2:
          list1.HapusTengahSingle()
          list1.tampilData()
          list1.penghancuran()
-elif pilih == 3:
-    print("------ Menu Pencarian ------")
-    print("1.Mencari Kode Barang Tertentu")
-    print("2.Pencarian stok Tertentu")
-    print("3.Pencarian Harga Jual Tertentu")
-    pilhpnmbhn = int(input("Pilih Menu : "))
-    #while
-    if pilhpnmbhn == 1 :
-        list1.PencarianKodeBarang()
-    elif(pilhpnmbhn == 2):
-        CariKode = int(input("Masukan Kode Barang Yang Ingin Dicari : "))
-        list1.PencarianStock(CariKode)
-elif pilih == 4:
-    list1.UbahData()
-    list1.tampilData()
+     elif pilih == 3:
+        print("------ Menu Pencarian ------")
+        print("1.Mencari Kode Barang Tertentu")
+        print("2.Pencarian stok Tertentu")
+        print("3.Pencarian Harga Jual Tertentu")
+        pilhpnmbhn = int(input("Pilih Menu : "))
+    while pilih != 0:
+     if pilhpnmbhn == 1 :
+         list1.PencarianKodeBarang()
+     elif(pilhpnmbhn == 2):
+         CariKode = int(input("Masukan Kode Barang Yang Ingin Dicari : "))
+         list1.PencarianStock(CariKode)
+     elif pilih == 4:
+         list1.UbahData()
+         list1.tampilData()
 
-elif pilih == 5:
-    list1.tampilData()
-elif pilih == 0 :
-    print("Exit ")
+     elif pilih == 5:
+        list1.tampilData()
+     elif pilih == 0 :
+        print("Exit ")
 
 # 4. Traversal Linked List - Menampilkan Data
 #list1.tampilData()
